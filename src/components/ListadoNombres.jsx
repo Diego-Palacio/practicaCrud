@@ -44,17 +44,19 @@ const editarNombre=(e)=>{
     const otroArreglo = lista.map ( item => item.id===id ? {id:id , nomb:nombre} : item);
 
     listaNombres(otroArreglo);
+    setEdicion(false);
+    setNombre("");
 
 }
 return (
 <div>
     <div className="row">
         
-            <div className="col "><h1>Listado de nombres:</h1>
+            <div className="col " style={{background: "rgb(83, 0, 0)" , padding: "50px"}}><h1>Listado de nombres:</h1>
             <ul className="list-group">
                     {
                         lista.map ( item =>
-                            <li key= {item.id} className="list-group-item"> {item.nomb}  
+                            <li  style ={{color:"black"}} key= {item.id} className="list-group-item"> {item.nomb}  
                             <button className="btn btn-danger float-right"
                              onClick={() => {borrarNombre(item.id)}}> Borrar </button>
                             
@@ -71,8 +73,8 @@ return (
             <div className="col">
                 <h1>Formulario para agregar a lista:</h1>
                 <form className="form-group" onSubmit= { edicion ? editarNombre :agregarNombre } >
-                     <input value ={nombre}  onChange={ (e) => {setNombre(e.target.value);}} className="form-control mb-3 "  type="text" placeholder="Ingrese su nombre"/>
-                     <input className="btn btn-info btn-block" type="submit" value= { !edicion ? "Ingresar persona al sistema" : "Editar nombre" }   />
+                     <input   value ={nombre}  onChange={ (e) => {setNombre(e.target.value);}} className="form-control mb-3 "  type="text" placeholder="Ingrese su nombre"/>
+                     <input   className="btn btn-info btn-block" type="submit" value= { !edicion ? "Ingresar persona al sistema" : "Editar nombre" }   />
                 </form>
             </div> 
     </div>
