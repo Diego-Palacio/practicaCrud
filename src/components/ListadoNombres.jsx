@@ -12,20 +12,26 @@ const [edicion,setEdicion]=useState(false);
 
 const [id,setId]=useState("");
 
+const [error ,setError]= useState(null);
+
 
 const agregarNombre =(e) =>{
        e.preventDefault();
        setEdicion(false);
 
-       if(nombre!==""){ 
+       if(!nombre.trim()){ 
+        setError("Campo vacio")
+    }
+    else{
         const nuevoNombre={
             id:uniqid(),
             nomb: nombre
         }
        listaNombres([...lista,nuevoNombre]);
        setNombre("");
-        }
-        else{alert  ("no se ingreso ningun nombre")}
+       setError(null);
+       }
+      
 }
 const borrarNombre= (id) =>{
         const nuevoArreglo = lista.filter(item=> item.id!==id);
@@ -37,6 +43,7 @@ const editar=(item)=>{
     setEdicion(true);
     setNombre(item.nomb);
     setId(item.id);
+    setError(null);
 
 }
 const editarNombre=(e)=>{
@@ -46,7 +53,7 @@ const editarNombre=(e)=>{
     listaNombres(otroArreglo);
     setEdicion(false);
     setNombre("");
-
+    setError(null);
 }
 return (
 <div>
@@ -76,6 +83,17 @@ return (
                      <input   value ={nombre}  onChange={ (e) => {setNombre(e.target.value);}} className="form-control mb-3 "  type="text" placeholder="Ingrese su nombre"/>
                      <input   className="btn btn-info btn-block" type="submit" value= { !edicion ? "Ingresar persona al sistema" : "Editar nombre" }   />
                 </form>
+               { 
+                error!=null ?
+                   ( <div>
+                     {error}
+                     </div>)
+                     :
+                    ( <div> </div> )        
+                }
+                
+
+
             </div> 
     </div>
 </div>
