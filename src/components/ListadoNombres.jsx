@@ -20,7 +20,7 @@ const agregarNombre =(e) =>{
        setEdicion(false);
 
        if(!nombre.trim()){ 
-        setError("Campo vacio")
+         setError( <b> !Campo vacio! </b> )
     }
     else{
         const nuevoNombre={
@@ -59,7 +59,7 @@ return (
 <div>
     <div className="row">
         
-            <div className="col " style={{background: "rgb(83, 0, 0)" , padding: "50px"}}><h1>Listado de nombres:</h1>
+            <div className="col " style={{background: "rgb(83, 0, 0)" , padding: "50px", marginTop :"60px" }}><h1>Listado de nombres:</h1>
             <ul className="list-group">
                     {
                         lista.map ( item =>
@@ -78,14 +78,14 @@ return (
             </div>
 
             <div className="col">
-                <h1>Formulario para agregar a lista:</h1>
+                <h1 style={{ marginTop:"60px"}}>Formulario para agregar a lista:</h1>
                 <form className="form-group" onSubmit= { edicion ? editarNombre :agregarNombre } >
                      <input   value ={nombre}  onChange={ (e) => {setNombre(e.target.value);}} className="form-control mb-3 "  type="text" placeholder="Ingrese su nombre"/>
                      <input   className="btn btn-info btn-block" type="submit" value= { !edicion ? "Ingresar persona al sistema" : "Editar nombre" }   />
                 </form>
                { 
                 error!=null ?
-                   ( <div>
+                   ( <div className="btn btn-danger btn-block">
                      {error}
                      </div>)
                      :

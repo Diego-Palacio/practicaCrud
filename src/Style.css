@@ -1,0 +1,54 @@
+
+
+.nav{
+    color:red;
+    height: 80px;
+    width: 1200px;
+    background: black;
+    align-items: center;
+    
+  
+}
+
+
+
+a{
+    font-size: 26px;
+    padding-left: 20px;
+  
+    
+}
+
+.navder{
+     padding-left: 900px;
+}
+
+.h1-bienvenida{
+        margin-top: 80px;
+        margin-bottom: 80px;
+        color:rgb(177, 10, 10);
+}
+
+.texto-tempBsAs{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 60px;
+}
+
+.temperatura{
+    font-size: 40px;
+    margin-top: 80px;
+    text-align: center;
+    padding-top: 26px;
+    border-radius: 200px;
+    background: rgb(66, 32, 22);
+    height: 100px;
+    
+}
+
+.contenedor-temperatura{
+        background: rgb(136, 56, 56);
+        height: 400px;
+        margin-top: 60px;
+        border-radius: 40px ;
+        border: 10px rgb(88, 25, 25) solid;
+}
