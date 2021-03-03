@@ -61,6 +61,8 @@ a{
 
 }
 
+/*Agregando animacion a card Clima*/
+
 @keyframes tiempoAnimacion{
     from {
         /*background: rgb(46, 46, 153);*/
