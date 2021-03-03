@@ -2,7 +2,7 @@
 import './App.css';
 import './Style.css';
 import ListadoNombres from  './components/ListadoNombres';
-import Pokemon from './components/Pokemon';
+import Clima from './components/Clima';
 import {
  BrowserRouter as Router,
  Switch,
@@ -23,7 +23,7 @@ function App() {
         
       <ul className="nav">
        <li><a href="/inicio">Inicio</a></li>
-       <li><a href="/pokemon">Pokemon</a></li>
+       <li><a href="/clima">Clima</a></li>
       <li><a className="navder" href="/">Salir</a></li>
       </ul>
         <Switch>
@@ -48,9 +48,9 @@ function App() {
         </Switch>
 
         <Switch>
-          <Route exact path="/pokemon">     
+          <Route exact path="/clima">     
             
-              <Pokemon></Pokemon>
+             <Clima></Clima>
       
           </Route>
         </Switch>

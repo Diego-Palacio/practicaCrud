@@ -30,25 +30,76 @@ a{
 }
 
 .texto-tempBsAs{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
     padding-top: 60px;
+    
 }
+
+
 
 .temperatura{
     font-size: 40px;
     margin-top: 80px;
     text-align: center;
     padding-top: 26px;
-    border-radius: 200px;
-    background: rgb(66, 32, 22);
+    border-radius: 20px;
+    background: rgb(17, 19, 51);
     height: 100px;
+    background-image: url(
+        "tiempo.png"
     
+    );
+        
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position-x: 100px;
+    background-position-y: 10px;
+
+    animation: tiempoAnimacion 2s;
+   
+
 }
 
+@keyframes tiempoAnimacion{
+    from {
+        /*background: rgb(46, 46, 153);*/
+        margin-right: 100%;
+      
+        
+      }
+    
+      to {
+        margin-right: 0%;
+          
+      }
+ 
+ }
+
+
+
+
+
 .contenedor-temperatura{
-        background: rgb(136, 56, 56);
+      /*  background: rgb(136, 56, 56);*/
+        background-image: url(
+            "Despejado.jpg"
+            
+        );
         height: 400px;
+        width: 540px;
         margin-top: 60px;
         border-radius: 40px ;
-        border: 10px rgb(88, 25, 25) solid;
+        border-top: 10px rgb(25, 23, 85) solid;
+        border-bottom: 10px rgb(25, 23, 85) solid;
+        animation: contenedor 2s;
+}
+
+@keyframes cont {
+    from{
+        margin-left: 100%;
+    }
+    to{
+        margin-left: 0%;
+    }
 }
