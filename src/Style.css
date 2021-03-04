@@ -20,7 +20,7 @@ a{
 }
 
 .navder{
-     padding-left: 900px;
+     padding-left: 600px;
 }
 
 .h1-bienvenida{
@@ -104,4 +104,31 @@ a{
     to{
         margin-left: 0%;
     }
+}
+
+.textoPokemon{
+    margin-top: 50px;
+    color:red;
+   font-size: 60px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.imagen{
+    width: 120px;
+    display: grid;
+    margin:auto;
+    animation: animacionPokemon 2s;
+    border-radius: 50px;
+}
+
+
+@keyframes animacionPokemon{
+    20%{
+       
+        background-color: red;
+        border: 2px white solid;
+    }
+
+    
+  
 }
