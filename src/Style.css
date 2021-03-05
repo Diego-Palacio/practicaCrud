@@ -107,7 +107,8 @@ a{
 }
 
 .textoPokemon{
-    margin-top: 50px;
+     margin-top: auto;
+    text-align: center;
     color:red;
    font-size: 60px;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -131,4 +132,16 @@ a{
 
     
   
+}
+
+.habilidades{
+    background: red;
+}
+
+.contenedorPokemon{
+    border: 2px white solid;
+    width: 500px;
+    margin-top: 64px;
+    height: 400px;
+    
 }
