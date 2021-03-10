@@ -70,7 +70,7 @@ return(
             <input  className="btnRandom1" type="submit"  value="Random" onClick={cambiarModoRandom} />
             
             </div>
-            <div className="tituloRandom"> { modo? "" : <p> RANDOM </p>  } </div>
+            <div className="tituloRandom"> { modo? "" : <p> Random </p>  } </div>
          {modo?
          <input className="btnBuscar" type="submit" onClick= {obtenerPokemon}  value="" /> :
          <input className="btnRandom" type="submit" onClick= {obtenerPokemonRandom}  value="" /> }
