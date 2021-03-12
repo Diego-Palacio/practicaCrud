@@ -22,7 +22,7 @@ function App() {
       <Router>
       
         
-        
+
       <ul className="nav">
        <li><a href="/inicio">Inicio</a></li>
        <li><a href="/clima">Clima</a></li>
