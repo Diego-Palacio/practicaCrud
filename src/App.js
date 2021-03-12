@@ -20,7 +20,7 @@ function App() {
     <div className="App-header">
       
       <Router>
-
+      
         
       <ul className="nav">
        <li><a href="/inicio">Inicio</a></li>

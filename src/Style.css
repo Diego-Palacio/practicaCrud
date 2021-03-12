@@ -236,7 +236,8 @@ a{
 
      from
      {
-         margin-right: 11%;
+         
+        margin-right: 11%;
          transform: rotate(360deg);
      }
  }
