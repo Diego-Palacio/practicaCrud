@@ -1,4 +1,4 @@
-import React , { useState}  from 'react'
+import React , { Fragment, useState}  from 'react'
 
 import axios from 'axios';
 
@@ -65,22 +65,8 @@ return(
 
     <div>
 
-        <div className="columna"> 
-            <input className="btnNumero" type="submit" value= "Por numero" onClick={cambiarModo}  /> 
-            <input  className="btnRandom1" type="submit"  value="Random" onClick={cambiarModoRandom} />
-            
-            </div>
-            <div className="tituloRandom"> { modo? "" : <p> Random </p>  } </div>
-         {modo?
-         <input className="btnBuscar" type="submit" onClick= {obtenerPokemon}  value=" " /> :
-         <input className="btnRandom" type="submit" onClick= {obtenerPokemonRandom}  value="" /> }
-
-
-        { modo?    
-        <input className="inputPokemon" type="text" placeholder="ingrese un numero"
-        onChange= { (e)=>{  setNumero(e.target.value);  } } /> :
-       <div></div>}
-        
+<div className="grid"> 
+    
         <div className="contenedorPokemon">
                 <h1 className="textoPokemon"> {pokemons} </h1>
                 <img src={imagen} className="imagen"/>
@@ -97,7 +83,30 @@ return(
               }
             
         </div>
-         
+
+        
+
+        <div className="d"> 
+         <input className="btnNumero" type="submit" value= "Por numero" onClick={cambiarModo}  /> 
+         <input  className="btnRandom1" type="submit"  value="Random" onClick={cambiarModoRandom} />
+            
+      <div className="tituloRandom"> { modo? "" : <p> Random </p>  } </div>
+         {modo?
+        <input className="btnBuscar" type="submit" onClick= {obtenerPokemon}  value=" " /> :
+         <input className="btnRandom" type="submit" onClick= {obtenerPokemonRandom}  value="" /> }
+
+         { modo?    
+        <input className="inputPokemon" type="text" placeholder="ingrese un numero"
+        onChange= { (e)=>{  setNumero(e.target.value);  } } /> :
+       <div></div>}
+
+        </div>
+
+
+
+
+        </div>
+      
 </div>
 
 

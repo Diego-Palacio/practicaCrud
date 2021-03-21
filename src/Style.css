@@ -1,5 +1,4 @@
 
-
 .nav{
     color:red;
     height: 80px;
@@ -7,9 +6,7 @@
     background: black;
     align-items: center;
     
-  
 }
-
 
 
 a{
@@ -107,7 +104,7 @@ a{
 }
 
 .textoPokemon{
-     margin-top: auto;
+    
     text-align: center;
     color:red;
    font-size: 60px;
@@ -116,8 +113,7 @@ a{
 
 .imagen{
     width: 120px;
-    display: grid;
-    margin:auto;
+
     animation: animacionPokemon 2s;
     border-radius: 50px;
 }
@@ -138,13 +134,12 @@ a{
     text-align: center;
     background: red;
     width: 200px;
-    margin: auto;
-    margin-top: 10px;
+  
     animation: habilid 2s;
   
 }
 
-@keyframes habilid{
+@keyframes habili{
 
     from{
        background:#410505;
@@ -162,20 +157,17 @@ a{
 
 .contenedorPokemon{
     border: 2px white solid;
+  
     width: 400px;
-    margin-top: 40px;
     height: 400px;
-    margin-left: 80px;
     
 }
 
 .btnNumero{
     width: 100px;
-    margin-top: 40px;
-    margin-left: 200px;
-    margin-right: 8px;
     font-weight: 500;
 }
+
 .btnNumero:active { background: rgb(214, 11, 11); }
 
 .btnRandom1{ font-weight: 500;}
@@ -184,14 +176,11 @@ a{
 .btnBuscar {
     color:rgb(48, 223, 48);
     font-size: 20px;
-    margin-top: 166px;
-    margin-left: 8px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     border-radius: 60px;
     height: 100px;
     width: 100px;
     border: 4px black solid;
-    float:right;
     background-image: url("pokebola.png");
     background-repeat: no-repeat;
     background-size: 114px;
@@ -209,14 +198,12 @@ a{
 
 .btnRandom{
    
-    margin-top: 166px;
-    margin-left: 8px;
+  
     font-family:Georgia, 'Times New Roman', Times, serif;
     border-radius: 60px;
     height: 100px;
     width: 100px;
    border: 4px black solid;
-    float:right;
    /* background: rgba(155, 126, 126, 0.726);*/
     background-image: url("pokebola.png");
     background-repeat: no-repeat;
@@ -231,7 +218,7 @@ a{
  }
 
 
- @keyframes btnRandomAnimacion{
+ @keyframes btnRandomAnimacio{
     
 
      from
@@ -243,7 +230,7 @@ a{
  }
 
  
- @keyframes btnRandomBuscar{
+ @keyframes btnRandomBusca{
     from
     {
         margin-top: 50%;
@@ -258,11 +245,8 @@ a{
 
  .inputPokemon{
    
-    margin-top: 200px;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    
-    float:right;
-    margin-left: 18px;
+
  }
 
 
@@ -279,17 +263,20 @@ a{
     
   }
 
-.columna{
-    column-count:2;
-}
+
 
 .tituloRandom{
-    float:right;
-    margin-top: 196px;
     font-weight: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:red;
     font-size: 24px;
    
+}
+
+
+.grid{
+    display:grid ;
+    grid-template-columns: 50% 50% ;
+    gap:200px;
 }
 
